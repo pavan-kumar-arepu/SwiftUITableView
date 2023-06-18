@@ -5,13 +5,14 @@ Created a Simple Table View Application with Swift UI
 
 Here use case is: Show the Prime Minister of India. 
 
-Date: Jun 19, 2023
+Date: Jun 19, 2023 (All Text is dummy text ONLY)
 Updated screenshots with more functionality:
-![List](https://github.com/pavan-kumar-arepu/SwiftUITableView/assets/13812858/3fce2445-7c52-4a69-9110-83d42dd7e5a5)
+
+![List](https://github.com/pavan-kumar-arepu/SwiftUITableView/assets/13812858/98075d97-3a2d-4110-8ae0-190a296e70f7)
 
 
-![Details](https://github.com/pavan-kumar-arepu/SwiftUITableView/assets/13812858/f4c77ff5-2f15-445a-9b73-f91430d94f9b)
 
+![Details](https://github.com/pavan-kumar-arepu/SwiftUITableView/assets/13812858/296f8acc-aa00-4088-a5ad-2e1c296b986a)
 
 Date: Jun 18, 2023
 Light Mode: 
