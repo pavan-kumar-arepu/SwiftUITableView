@@ -10,14 +10,12 @@ Updated screenshots with more functionality:
 
 ![List](https://github.com/pavan-kumar-arepu/SwiftUITableView/assets/13812858/98075d97-3a2d-4110-8ae0-190a296e70f7)
 
-
-
 ![Details](https://github.com/pavan-kumar-arepu/SwiftUITableView/assets/13812858/296f8acc-aa00-4088-a5ad-2e1c296b986a)
 
-Date: Jun 18, 2023
+
+Date: Jun 18, 2023 (All Text is dummy text ONLY)
 Light Mode: 
 ![ListView](https://github.com/pavan-kumar-arepu/SwiftUITableView/assets/13812858/d22fec11-22b6-4d91-ba80-5a313317bc33)
-
 
 Detailed Screen: 
 ![DetailedView](https://github.com/pavan-kumar-arepu/SwiftUITableView/assets/13812858/f261e40d-b6c6-4720-b75c-10a9b00c0937)
