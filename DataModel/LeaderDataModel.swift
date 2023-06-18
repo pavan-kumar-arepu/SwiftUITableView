@@ -14,4 +14,5 @@ struct Leader {
     var startTime: String
     var endTime: String
     var party: String
+    var imageName: String    
 }

@@ -11,17 +11,23 @@ import SwiftUI
 struct LeaderRow: View {
     var leader: Leader
     
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Name: \(leader.name)")
-                .font(.headline)
-            Text("Start Time: \(leader.startTime)")
-                .font(.subheadline)
-            Text("End Time: \(leader.endTime)")
-                .font(.subheadline)
-            Text("Party: \(leader.party)")
-                .font(.subheadline)
+        HStack {
+            Image("Nehru") // Replace "leaderImage" with the actual image name or system image name
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100, height: 100)
+            
+            VStack(alignment: .leading) {
+                Text("\(leader.name)")
+                    .font(.headline)
+                Text("\(leader.startTime) - \(leader.endTime)")
+                    .font(.subheadline)
+                Text("\(leader.party)")
+                    .font(.subheadline)
+            }
+            .padding()
         }
-        .padding()
     }
 }

@@ -13,7 +13,7 @@
 		0BD00C052A3E583300F359E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD00C042A3E583300F359E5 /* Preview Assets.xcassets */; };
 		0BD00C0C2A3E596000F359E5 /* LeaderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C0B2A3E596000F359E5 /* LeaderDataModel.swift */; };
 		0BD00C102A3E5A1600F359E5 /* LeadersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C0F2A3E5A1600F359E5 /* LeadersView.swift */; };
-		0BD00C122A3E61A100F359E5 /* LeaderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C112A3E61A100F359E5 /* LeaderDetailView.swift */; };
+		0BD00C122A3E61A100F359E5 /* LeaderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		0BD00C042A3E583300F359E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0BD00C0B2A3E596000F359E5 /* LeaderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderDataModel.swift; sourceTree = "<group>"; };
 		0BD00C0F2A3E5A1600F359E5 /* LeadersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersView.swift; sourceTree = "<group>"; };
-		0BD00C112A3E61A100F359E5 /* LeaderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderDetailView.swift; sourceTree = "<group>"; };
+		0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			children = (
 				0BD00BFD2A3E583000F359E5 /* SwiftUITableViewApp.swift */,
 				0BD00BFF2A3E583000F359E5 /* ContentView.swift */,
-				0BD00C112A3E61A100F359E5 /* LeaderDetailView.swift */,
+				0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */,
 				0BD00C012A3E583300F359E5 /* Assets.xcassets */,
 				0BD00C032A3E583300F359E5 /* Preview Content */,
 			);
@@ -165,7 +165,7 @@
 				0BD00C002A3E583000F359E5 /* ContentView.swift in Sources */,
 				0BD00C0C2A3E596000F359E5 /* LeaderDataModel.swift in Sources */,
 				0BD00BFE2A3E583000F359E5 /* SwiftUITableViewApp.swift in Sources */,
-				0BD00C122A3E61A100F359E5 /* LeaderDetailView.swift in Sources */,
+				0BD00C122A3E61A100F359E5 /* LeaderDetail.swift in Sources */,
 				0BD00C102A3E5A1600F359E5 /* LeadersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +303,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +333,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
