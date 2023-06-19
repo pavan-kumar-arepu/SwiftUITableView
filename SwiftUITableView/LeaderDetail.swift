@@ -11,6 +11,8 @@ import SwiftUI
 struct LeaderDetail: View {
     var leader: Leader
     
+    @State private var selected: Bool = false
+
     var leaders = [
         Leader(name: "Jawaharlal Nehru", startTime: "1947", endTime: "1952", party: "Congress Party", imageName: "Atal-Bihari"),
         Leader(name: "Narendra Modi", startTime: "2014", endTime: "OnGoing", party: "Bharatiya Janata Party", imageName: "Charan-singh"),
@@ -45,7 +47,18 @@ struct LeaderDetail: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 100, height: 100)
-                            .frame(maxWidth: .infinity, alignment: .top) // Align image at the top
+                            .frame(maxWidth: .infinity, alignment: .top)
+                            .scaleEffect(selected ? 1.5 : 1.0)
+                            .onAppear {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    // Perform actions after the delay of 0.5 seconds
+                                    print("Animation completed after delay")
+                                    // Additional code...
+                                    selected.toggle()
+                                }
+                            }
+                        
+                        // Align image at the top
                         
                         Text("\(leader.startTime) - \(leader.endTime) (\(leader.party))")
                             .font(.subheadline)

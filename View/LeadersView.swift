@@ -11,7 +11,6 @@ import SwiftUI
 struct LeaderRow: View {
     var leader: Leader
     
-    
     var body: some View {
         HStack {
             Image("Nehru") // Replace "leaderImage" with the actual image name or system image name
