@@ -13,17 +13,7 @@ struct LeaderDetail: View {
     
     @State private var selected: Bool = false
 
-    var leaders = [
-        Leader(name: "Jawaharlal Nehru", startTime: "1947", endTime: "1952", party: "Congress Party", imageName: "Atal-Bihari"),
-        Leader(name: "Narendra Modi", startTime: "2014", endTime: "OnGoing", party: "Bharatiya Janata Party", imageName: "Charan-singh"),
-        Leader(name: "Lal Bahadur Shastri", startTime: "1964", endTime: "1966", party: "Congress Party", imageName: "Narendra-Modi"),
-        Leader(name: "Jawaharlal Nehru One", startTime: "1947", endTime: "1952", party: "Congress Party", imageName: "PV-Narasimha-Rao"),
-        Leader(name: "Narendra Modi One", startTime: "2014", endTime: "OnGoing", party: "Bharatiya Janata Party", imageName: "Rajiv-Gandhi"),
-        Leader(name: "Lal Bahadur Shastri One", startTime: "1964", endTime: "1966", party: "Congress Party", imageName: "Deve-Gowda"),
-        Leader(name: "Jawaharlal Nehru Two", startTime: "1947", endTime: "1952", party: "Congress Party", imageName: "PV-Narasimha-Rao"),
-        Leader(name: "Narendra Modi Two", startTime: "2014", endTime: "OnGoing", party: "Bharatiya Janata Party", imageName: "Manmohan-Singh"),
-        Leader(name: "Lal Bahadur Shastri Two", startTime: "1964", endTime: "1966", party: "Congress Party", imageName: "Nehru")
-    ]
+    var leaders = DataService.shared.getLeaders()
     
     private let gridItems = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())] // Adjust the number of grid items as per your preference
 
@@ -49,18 +39,11 @@ struct LeaderDetail: View {
                             .frame(width: 100, height: 100)
                             .frame(maxWidth: .infinity, alignment: .top)
                             .scaleEffect(selected ? 1.5 : 1.0)
-                            .onAppear {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    // Perform actions after the delay of 0.5 seconds
-                                    print("Animation completed after delay")
-                                    // Additional code...
-                                    selected.toggle()
-                                }
-                            }
+                            
                         
                         // Align image at the top
                         
-                        Text("\(leader.startTime) - \(leader.endTime) (\(leader.party))")
+                        Text("2002 - 2014, BJP")
                             .font(.subheadline)
                             .multilineTextAlignment(.center)// Horizontally center the text
                         
@@ -101,7 +84,7 @@ struct LeaderDetail: View {
                 ScrollView(.horizontal) {
                     HStack(spacing: 10) {
                         ForEach(leaders, id: \.name) { leader in
-                            Image(leader.imageName)
+                            Image("Manmohan-Singh")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 50, height: 50)

@@ -21,8 +21,6 @@ struct LeaderRow: View {
             VStack(alignment: .leading) {
                 Text("\(leader.name)")
                     .font(.headline)
-                Text("\(leader.startTime) - \(leader.endTime)")
-                    .font(.subheadline)
                 Text("\(leader.party)")
                     .font(.subheadline)
             }

@@ -6,21 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseRemoteConfig
 
 struct ContentView: View {
     
-    var leaders = [
-        Leader(name: "Jawaharlal Nehru", startTime: "1947", endTime: "1952", party: "Congress Party", imageName: "Atal-Bihari"),
-        Leader(name: "Narendra Modi", startTime: "2014", endTime: "OnGoing", party: "Bharatiya Janata Party", imageName: "Charan-singh"),
-        Leader(name: "Lal Bahadur Shastri", startTime: "1964", endTime: "1966", party: "Congress Party", imageName: "Narendra-Modi"),
-        Leader(name: "Jawaharlal Nehru One", startTime: "1947", endTime: "1952", party: "Congress Party", imageName: "PV-Narasimha-Rao"),
-        Leader(name: "Narendra Modi One", startTime: "2014", endTime: "OnGoing", party: "Bharatiya Janata Party", imageName: "Rajiv-Gandhi"),
-        Leader(name: "Lal Bahadur Shastri One", startTime: "1964", endTime: "1966", party: "Congress Party", imageName: "Deve-Gowda"),
-        Leader(name: "Jawaharlal Nehru Two", startTime: "1947", endTime: "1952", party: "Congress Party", imageName: "PV-Narasimha-Rao"),
-        Leader(name: "Narendra Modi Two", startTime: "2014", endTime: "OnGoing", party: "Bharatiya Janata Party", imageName: "Manmohan-Singh"),
-        Leader(name: "Lal Bahadur Shastri Two", startTime: "1964", endTime: "1966", party: "Congress Party", imageName: "Nehru")
-    ]
+    @State var remoteLeaders: [Leader] = []
+    var leaderVM = LeaderViewModel()
+    
+    @State private var isLoading = false
+    
     var body: some View {
+        
         NavigationView {
             ZStack {
                 LinearGradient(
@@ -33,15 +30,30 @@ struct ContentView: View {
                     endPoint: .bottom
                 )
                 .edgesIgnoringSafeArea(.all)
-                List(leaders, id: \.name) { leader in
-                    NavigationLink(destination: LeaderDetail(leader: leader)) {
-                        LeaderRow(leader: leader)
+                
+                if isLoading {
+                    ProgressView() // Show loading indicator while fetching data
+                } else {
+                    Text("Data Loaded!") // Show content when data is loaded
+                    List(remoteLeaders, id: \.name) { (leader: Leader) in
+                        NavigationLink(destination: LeaderDetail(leader: leader)) {
+                            LeaderRow(leader: leader)
+                        }
                     }
+                    .listStyle(InsetGroupedListStyle())
+                    .navigationBarTitle("Indian Leaders")
                 }
-                .listStyle(InsetGroupedListStyle())
-                .navigationBarTitle("Indian Leaders")
             }
             .background(Color.clear)
+        }
+        .onAppear {
+            isLoading = true
+            FirebaseRemoteConfigManager.shared.fetchRemoteConfigData { leaders in
+                isLoading = false
+                if let leaders = leaders {
+                    remoteLeaders = leaders
+                }
+            }
         }
         .background(Color.clear)
         .statusBar(hidden: true)

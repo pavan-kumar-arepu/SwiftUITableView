@@ -9,7 +9,7 @@ import Foundation
 
 // Lets say dataModel here is "Leaders" of India
 
-struct Leader {
+struct LeaderOld {
     var name: String
     var startTime: String
     var endTime: String
