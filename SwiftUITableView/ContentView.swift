@@ -38,7 +38,6 @@ struct ContentView: View {
                         LeaderRow(leader: leader)
                     }
                 }
-//                .background(Color.clear) // Clear background to let the gradient show through
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle("Indian Leaders")
             }
