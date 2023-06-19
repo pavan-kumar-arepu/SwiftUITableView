@@ -70,11 +70,14 @@ struct LeaderDetail: View {
                 ScrollView(.horizontal) {
                     HStack(spacing: 10) {
                         ForEach(leaders, id: \.name) { leader in
-                            Image("Manmohan-Singh")
+                            Image(leader.leaderLogo)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 50, height: 50)
                                 .padding(10)
+                        }
+                        .onTapGesture {
+                            _ = LeaderDetail(leader: leader)
                         }
                     }
                     .padding()
