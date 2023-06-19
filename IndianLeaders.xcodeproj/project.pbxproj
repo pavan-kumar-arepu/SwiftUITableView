@@ -16,6 +16,7 @@
 		0BAB24CD2A3FFB8B001F1BE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAB24CC2A3FFB8B001F1BE6 /* Constants.swift */; };
 		0BAB24CF2A3FFD1E001F1BE6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAB24CE2A3FFD1E001F1BE6 /* DataService.swift */; };
 		0BAB24D22A4002B8001F1BE6 /* LeadersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAB24D12A4002B8001F1BE6 /* LeadersViewModel.swift */; };
+		0BAB24D42A409836001F1BE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAB24D32A409836001F1BE6 /* Extensions.swift */; };
 		0BD00BFE2A3E583000F359E5 /* IndianLeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00BFD2A3E583000F359E5 /* IndianLeaders.swift */; };
 		0BD00C002A3E583000F359E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00BFF2A3E583000F359E5 /* ContentView.swift */; };
 		0BD00C022A3E583300F359E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD00C012A3E583300F359E5 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		0BAB24CC2A3FFB8B001F1BE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0BAB24CE2A3FFD1E001F1BE6 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0BAB24D12A4002B8001F1BE6 /* LeadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersViewModel.swift; sourceTree = "<group>"; };
+		0BAB24D32A409836001F1BE6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0BD00BFA2A3E583000F359E5 /* IndianLeaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndianLeaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD00BFD2A3E583000F359E5 /* IndianLeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianLeaders.swift; sourceTree = "<group>"; };
 		0BD00BFF2A3E583000F359E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		0BD00BF12A3E583000F359E5 = {
 			isa = PBXGroup;
 			children = (
+				0BAB24D32A409836001F1BE6 /* Extensions.swift */,
 				0BAB24CC2A3FFB8B001F1BE6 /* Constants.swift */,
 				0BAB24D02A3FFD2F001F1BE6 /* Repository */,
 				0BAB24BE2A3FEE89001F1BE6 /* Firebase */,
@@ -220,6 +223,7 @@
 				0BAB24C92A3FF5D0001F1BE6 /* FirebaseRemoteConfigManager.swift in Sources */,
 				0BD00C102A3E5A1600F359E5 /* LeadersView.swift in Sources */,
 				0BAB24CD2A3FFB8B001F1BE6 /* Constants.swift in Sources */,
+				0BAB24D42A409836001F1BE6 /* Extensions.swift in Sources */,
 				0BAB24D22A4002B8001F1BE6 /* LeadersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

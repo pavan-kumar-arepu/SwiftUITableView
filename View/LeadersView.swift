@@ -13,7 +13,7 @@ struct LeaderRow: View {
     
     var body: some View {
         HStack {
-            Image("Nehru") // Replace "leaderImage" with the actual image name or system image name
+            Image(leader.leaderLogo) // Replace "leaderImage" with the actual image name or system image name
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)

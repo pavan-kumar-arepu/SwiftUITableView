@@ -33,50 +33,36 @@ struct LeaderDetail: View {
             VStack {
                 ScrollView {
                     VStack(alignment: .leading) {
-                        Image("Nehru") // Replace "leaderImage" with the actual image name or system image name
+                        Image(leader.leaderLogo) // Replace "leaderImage" with the actual image name or system image name
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 100, height: 100)
                             .frame(maxWidth: .infinity, alignment: .top)
-                            .scaleEffect(selected ? 1.5 : 1.0)
-                            
                         
                         // Align image at the top
-                        
-                        Text("2002 - 2014, BJP")
+                        Text("\(leader.rulingPeriod) - \(leader.party)")
                             .font(.subheadline)
                             .multilineTextAlignment(.center)// Horizontally center the text
                         
                         Spacer() // Create additional space at the bottom
                         
-                        
                         HStack {
-                            Text("Details:").bold() + Text(" Jawaharlal Nehru was an Indian anti-colonial nationalist, secular humanist, social democrat, and author who was a central figure in India during the middle third of the 20th century. Nehru was a principal leader of the Indian nationalist movement in the 1930s and 1940s")
+                            Text("About:").bold() + Text(leader.about)
                         }
                         Spacer()
                         
                         HStack {
-                            Text("Awards:").bold() + Text(" Jawaharlal Nehru was an Indian anti-colonial nationalist, secular humanist, social democrat, and author who was a central figure in India during the middle third of the 20th century. Nehru was a principal leader of the Indian nationalist movement in the 1930s and 1940s")
-                        }
-                        
-                        HStack {
-                            Text("Background:").bold() + Text(" Jawaharlal Nehru was an Indian anti-colonial nationalist, secular humanist, social democrat, and author who was a central figure in India during the middle third of the 20th century. Nehru was a principal leader of the Indian nationalist movement in the 1930s and 1940s")
-                        }
-                        
-                        
-                        HStack {
-                            Text("Achivements:").bold() + Text(" Jawaharlal Nehru was an Indian anti-colonial nationalist, secular humanist, social democrat, and author who was a central figure in India during the middle third of the 20th century. Nehru was a principal leader of the Indian nationalist movement in the 1930s and 1940s")
+                            Text("Achievements:").bold() + Text(leader.achievements)
                         }
                         
                         HStack {
                             // Align image at the top
                             Text("Signature:").bold()
-                            Image("Manmohan-Sign") // Replace "leaderImage" with the actual image name or system image name
+                            Image(leader.signatureLogo) // Replace "leaderImage" with the actual image name or system image name
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(maxWidth: .infinity, alignment: .top)
                         }
-                        
                         Spacer() // Create additional space at the bottom
                     }
                 }
