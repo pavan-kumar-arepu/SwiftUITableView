@@ -40,8 +40,10 @@ struct ContentView: View {
                             LeaderRow(leader: leader)
                         }
                     }
+                    .background(Color.clear)
                     .listStyle(InsetGroupedListStyle())
                     .navigationBarTitle("Indian Leaders")
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                 }
             }
             .background(Color.clear)
