@@ -21,7 +21,6 @@
 		0BD00C002A3E583000F359E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00BFF2A3E583000F359E5 /* ContentView.swift */; };
 		0BD00C022A3E583300F359E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD00C012A3E583300F359E5 /* Assets.xcassets */; };
 		0BD00C052A3E583300F359E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD00C042A3E583300F359E5 /* Preview Assets.xcassets */; };
-		0BD00C0C2A3E596000F359E5 /* LeaderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C0B2A3E596000F359E5 /* LeaderDataModel.swift */; };
 		0BD00C102A3E5A1600F359E5 /* LeadersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C0F2A3E5A1600F359E5 /* LeadersView.swift */; };
 		0BD00C122A3E61A100F359E5 /* LeaderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		0BD00BFF2A3E583000F359E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0BD00C012A3E583300F359E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BD00C042A3E583300F359E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0BD00C0B2A3E596000F359E5 /* LeaderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderDataModel.swift; sourceTree = "<group>"; };
 		0BD00C0F2A3E5A1600F359E5 /* LeadersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersView.swift; sourceTree = "<group>"; };
 		0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +56,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B50C4B32A433038004DC76D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0BAB24D12A4002B8001F1BE6 /* LeadersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0B50C4B42A433075004DC76D /* External */ = {
+			isa = PBXGroup;
+			children = (
+				0BAB24BE2A3FEE89001F1BE6 /* Firebase */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		0B50C4B52A433087004DC76D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0BAB24D32A409836001F1BE6 /* Extensions.swift */,
+				0BAB24CC2A3FFB8B001F1BE6 /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		0BAB24BE2A3FEE89001F1BE6 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +101,11 @@
 		0BD00BF12A3E583000F359E5 = {
 			isa = PBXGroup;
 			children = (
-				0BAB24D32A409836001F1BE6 /* Extensions.swift */,
-				0BAB24CC2A3FFB8B001F1BE6 /* Constants.swift */,
+				0B50C4B52A433087004DC76D /* Util */,
+				0B50C4B42A433075004DC76D /* External */,
 				0BAB24D02A3FFD2F001F1BE6 /* Repository */,
-				0BAB24BE2A3FEE89001F1BE6 /* Firebase */,
 				0BD00C0E2A3E59FD00F359E5 /* View */,
+				0B50C4B32A433038004DC76D /* ViewModel */,
 				0BD00C0D2A3E59EF00F359E5 /* DataModel */,
 				0BD00BFC2A3E583000F359E5 /* SwiftUITableView */,
 				0BD00BFB2A3E583000F359E5 /* Products */,
@@ -101,9 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				0BD00BFD2A3E583000F359E5 /* IndianLeaders.swift */,
-				0BD00BFF2A3E583000F359E5 /* ContentView.swift */,
-				0BAB24D12A4002B8001F1BE6 /* LeadersViewModel.swift */,
-				0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */,
 				0BD00C012A3E583300F359E5 /* Assets.xcassets */,
 				0BD00C032A3E583300F359E5 /* Preview Content */,
 			);
@@ -121,7 +141,6 @@
 		0BD00C0D2A3E59EF00F359E5 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				0BD00C0B2A3E596000F359E5 /* LeaderDataModel.swift */,
 				0BAB24CA2A3FFAA8001F1BE6 /* LeaderDTO.swift */,
 			);
 			path = DataModel;
@@ -131,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				0BD00C0F2A3E5A1600F359E5 /* LeadersView.swift */,
+				0BD00BFF2A3E583000F359E5 /* ContentView.swift */,
+				0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,7 +238,6 @@
 				0BAB24CF2A3FFD1E001F1BE6 /* DataService.swift in Sources */,
 				0BAB24CB2A3FFAA8001F1BE6 /* LeaderDTO.swift in Sources */,
 				0BD00C002A3E583000F359E5 /* ContentView.swift in Sources */,
-				0BD00C0C2A3E596000F359E5 /* LeaderDataModel.swift in Sources */,
 				0BD00BFE2A3E583000F359E5 /* IndianLeaders.swift in Sources */,
 				0BD00C122A3E61A100F359E5 /* LeaderDetail.swift in Sources */,
 				0BAB24C92A3FF5D0001F1BE6 /* FirebaseRemoteConfigManager.swift in Sources */,
