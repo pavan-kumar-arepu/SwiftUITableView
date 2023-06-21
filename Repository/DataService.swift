@@ -12,16 +12,12 @@ import FirebaseRemoteConfig
 
 class DataService {
     static let shared = DataService()
-    private var leaders: [Leader]? = []
+    private var leaders: [Leader] = []
     
     private init() {}
     
-    func getLeaders() -> [Leader]? {
-        
-        guard let leaders = FirebaseRemoteConfigManager.shared.getLeaders else {
-            return nil
-        }
-        return leaders
+    func getLeaders() -> [Leader] {
+        return FirebaseRemoteConfigManager.shared.getLeaders
     }
     
 //    func fetchLeaders() -> [Leader?] {

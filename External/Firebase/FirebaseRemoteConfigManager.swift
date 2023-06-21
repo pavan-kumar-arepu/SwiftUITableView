@@ -12,7 +12,7 @@ import FirebaseRemoteConfig
 class FirebaseRemoteConfigManager {
     static let shared = FirebaseRemoteConfigManager()
     private let remoteConfig = RemoteConfig.remoteConfig()
-    private var leaders: [Leader]?
+    private var leaders: [Leader] = []
 
     private init() {
         let settings = RemoteConfigSettings()
@@ -20,11 +20,8 @@ class FirebaseRemoteConfigManager {
         remoteConfig.setDefaults(fromPlist: "GoogleService-Info")
     }
     
-    var getLeaders: [Leader]? {
-        guard let receivedLeaders = leaders else {
-            return nil
-        }
-        return receivedLeaders
+    var getLeaders: [Leader] {
+        return leaders
     }
 
     func fetchRemoteConfig(completion: @escaping () -> Void) {

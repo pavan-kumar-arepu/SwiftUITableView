@@ -11,15 +11,14 @@ import SwiftUI
 struct LeaderDetail: View {
     var leader: Leader
     
-    @State private var selected: Bool = false
+    @State private var selectedLeader: Bool = false
 
     let defaultLeader: [Leader] = [Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "Very Good", achievements: "Bharat Ratna", leaderLogo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")]
     
     @State private var leaders = DataService.shared.getLeaders()
     
-    private let gridItems = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())] // Adjust the number of grid items as per your preference
+    private let gridItems = [GridItem(.flexible())]
 
-    
     var body: some View {
         ZStack {
             
@@ -31,18 +30,28 @@ struct LeaderDetail: View {
                 }
                 
                 ScrollView(.horizontal) {
-                    HStack(spacing: 10) {
-                 
-                        ForEach(leaders ?? defaultLeader) { leader in
-                            LeaderImage(size: 50.0, name: leader.leaderLogo, alignment: .leading)
-                                .padding(10)
-                        }
-                        .onTapGesture {
-                            _ = LeaderDetail(leader: leader)
-                        }
-                    }
-                    .padding()
-                }
+                            LazyHGrid(rows: gridItems, spacing: 0) {
+                               ForEach(leaders) { leader in
+                                   LeaderGrid(gridIcon: leader.leaderLogo)
+                               }
+                           }
+//                           .padding()
+                           .frame(maxHeight: 50)
+                       }
+                .frame(maxHeight: 50)
+                
+//                ScrollView(.horizontal) {
+//                    HStack(spacing: 10) {
+//                        ForEach(leaders) { leader in
+//                            LeaderImage(size: 50.0, name: leader.leaderLogo, alignment: .leading)
+//                                .padding(10)
+//                        }
+//                        .onTapGesture {
+//                            _ = LeaderDetail(leader: leader)
+//                        }
+//                    }
+//                    .padding()
+//                }
             }
             .navigationBarTitleDisplayMode(.large)
             .padding()
@@ -51,8 +60,6 @@ struct LeaderDetail: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
-
-
 
 struct LeaderDetail_Previews: PreviewProvider {
     static var previews: some View {
