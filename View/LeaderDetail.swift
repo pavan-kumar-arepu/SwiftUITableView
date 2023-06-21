@@ -13,67 +13,28 @@ struct LeaderDetail: View {
     
     @State private var selected: Bool = false
 
-    var leaders = DataService.shared.getLeaders()
+    let defaultLeader: [Leader] = [Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "Very Good", achievements: "Bharat Ratna", leaderLogo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")]
+    
+    @State private var leaders = DataService.shared.getLeaders()
     
     private let gridItems = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())] // Adjust the number of grid items as per your preference
 
     
     var body: some View {
         ZStack {
-            LinearGradient(
-                gradient: Gradient(colors: [
-                    Color.orange.opacity(0.5),
-                    Color.white.opacity(0.5),
-                    Color.green.opacity(0.5)
-                ]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .edgesIgnoringSafeArea(.all)
+            
+            IndianGradient()
+    
             VStack {
                 ScrollView {
-                    VStack(alignment: .leading) {
-                        Image(leader.leaderLogo) // Replace "leaderImage" with the actual image name or system image name
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 100, height: 100)
-                            .frame(maxWidth: .infinity, alignment: .top)
-                        
-                        // Align image at the top
-                        Text("\(leader.rulingPeriod) - \(leader.party)")
-                            .font(.subheadline)
-                            .multilineTextAlignment(.center)// Horizontally center the text
-                        
-                        Spacer() // Create additional space at the bottom
-                        
-                        HStack {
-                            Text("About:").bold() + Text(leader.about)
-                        }
-                        Spacer()
-                        
-                        HStack {
-                            Text("Achievements:").bold() + Text(leader.achievements)
-                        }
-                        
-                        HStack {
-                            // Align image at the top
-                            Text("Signature:").bold()
-                            Image(leader.signatureLogo) // Replace "leaderImage" with the actual image name or system image name
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity, alignment: .top)
-                        }
-                        Spacer() // Create additional space at the bottom
-                    }
+                    VSLeaderDetail(leader: leader)
                 }
                 
                 ScrollView(.horizontal) {
                     HStack(spacing: 10) {
-                        ForEach(leaders, id: \.name) { leader in
-                            Image(leader.leaderLogo)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 50, height: 50)
+                 
+                        ForEach(leaders ?? defaultLeader) { leader in
+                            LeaderImage(size: 50.0, name: leader.leaderLogo, alignment: .leading)
                                 .padding(10)
                         }
                         .onTapGesture {
@@ -87,5 +48,15 @@ struct LeaderDetail: View {
             .padding()
         }
         .navigationBarTitle("\(leader.name)")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+
+
+struct LeaderDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        let leader: Leader = Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "Very Good", achievements: "Bharat Ratna", leaderLogo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")
+        LeaderDetail(leader: leader)
     }
 }

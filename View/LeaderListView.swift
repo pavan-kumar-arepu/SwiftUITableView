@@ -9,53 +9,47 @@ import SwiftUI
 
 struct LeaderListView: View {
     
-    @State var remoteLeaders: [Leader] = []
     var leaderVM = LeaderViewModel()
-    
+
+    @State private var leaders: [Leader] = []
     @State private var isLoading = false
+    
     var body: some View {
         
         NavigationView {
             ZStack {
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color.orange.opacity(0.5),
-                        Color.white.opacity(0.5),
-                        Color.green.opacity(0.5)
-                    ]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                .edgesIgnoringSafeArea(.all)
+                IndianGradient()
                 
                 if isLoading {
                     ProgressView() // Show loading indicator while fetching data
                 } else {
                     Text("Data Loaded!") // Show content when data is loaded
-                    List(remoteLeaders, id: \.name) { (leader: Leader) in
-                        NavigationLink(destination: LeaderDetail(leader: leader)) {
+                    List(leaders) { leader in
+                        NavigationLink {
+                            LeaderDetail(leader: leader)
+                        } label: {
                             LeaderRow(leader: leader)
                         }
                     }
-                    .background(Color.clear)
-                    .listStyle(InsetGroupedListStyle())
-                    .navigationBarTitle("Indian Leaders")
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    .navigationTitle(" Leaders")
                 }
             }
-            .background(Color.clear)
         }
         .onAppear {
             isLoading = true
-            FirebaseRemoteConfigManager.shared.fetchRemoteConfigData { leaders in
-                isLoading = false
-                if let leaders = leaders {
-                    remoteLeaders = leaders
-                }
+            loadData()
+        }
+    }
+    
+    func loadData() {
+        leaderVM.fetchData { status in
+            isLoading = false
+            if status {
+                leaders = leaderVM.leaders
+            } else {
+                print("Error retrieving data")
             }
         }
-        .background(Color.clear)
-        .statusBar(hidden: true)
     }
 }
 

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Leader: Codable {
+struct Leader: Hashable, Codable, Identifiable {
+    let id: Int
     let name: String
     let pmNumber: String
     let party: String

@@ -12,7 +12,7 @@ class LeaderViewModel: ObservableObject {
     
     init() {
         // Fetch leaders and update the leaders array
-//        leaders = DataService.shared.fetchLeaders()
+        //        leaders = DataService.shared.fetchLeaders()
     }
     
     func fetchLeaders() -> [Leader] {
@@ -24,5 +24,14 @@ class LeaderViewModel: ObservableObject {
         return leaders
     }
     
-    
+    func fetchData(completion: @escaping (Bool) -> Void) {
+        FirebaseRemoteConfigManager.shared.fetchRemoteConfigData { leaders in
+            if let leadersArray = leaders {
+                self.leaders = leadersArray
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
 }
