@@ -23,11 +23,10 @@ struct LeaderDetail: View {
         ZStack {
             
             IndianGradient()
-    
+            
             VStack {
-                ScrollView {
-                    VSLeaderDetail(leader: selectedLeaderDetails)
-                }
+                VSLeaderDetail(leader: selectedLeaderDetails)
+                
                 
                 // Display grid of Leaders icons at the bottom in a single row
                 HStack(spacing: 0) {
@@ -46,7 +45,7 @@ struct LeaderDetail: View {
                 }
                 .frame(height: 50)
                 .padding()
-
+                
             }
         }
         .navigationBarTitle(selectedButtonLeader?.name ?? leader.name)

@@ -24,21 +24,21 @@ struct VSLeaderDetail: View {
                 Spacer()
                 
                 HStack {
-                    Text("About:").bold() +
+                    Text("About:").bold().font(.title3) +
                     Text("\n") +
-                    Text(leader.about)
+                    Text(leader.about).font(.subheadline)
                 }
                 Spacer()
                 
                 HStack {
-                    Text("Achievements:").bold() +
+                    Text("Achievements:").bold().font(.title3) +
                     Text("\n") +
-                    Text(leader.achievements)
+                    Text(leader.achievements).font(.subheadline)
                 }
                 
                 HStack {
-                    Text("Signature:").bold()
-                    Signature(name: leader.signatureLogo)
+                    Text("Signature:").bold().font(.title3)
+                    Signature(name: leader.signatureLogo).font(.subheadline)
                 }
                 Spacer()
             }

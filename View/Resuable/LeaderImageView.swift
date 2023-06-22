@@ -15,9 +15,14 @@ struct LeaderImage: View {
     var body: some View {
         Image(name)
             .resizable()
+            .clipShape(Circle())
             .aspectRatio(contentMode: .fit)
             .frame(width: size, height: size)
             .frame(maxWidth: .infinity, alignment: alignment)
+            .overlay {
+                Circle().stroke(.blue, lineWidth: 3)
+            }
+            .shadow(radius: 3)
     }
 }
 
