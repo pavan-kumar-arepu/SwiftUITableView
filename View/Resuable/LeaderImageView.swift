@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+/*
+ To Load Leader Image in detail screen
+ - parameter:
+    - size: icon size
+    - name: icon name
+    - alignment: preferable alignment
+ - returns: View
+ */
+
 struct LeaderImage: View {
     var size: CGFloat
     var name: String
@@ -34,7 +43,7 @@ struct LeaderImageView_Previews: PreviewProvider {
 
 /*
  To Load Signature Image
- - parameter name: SignatueName from servers.
+ - parameter: name: SignatueName from servers.
  - returns: View
  */
 struct Signature: View {

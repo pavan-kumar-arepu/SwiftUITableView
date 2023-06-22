@@ -7,6 +7,11 @@
 
 import Foundation
 
+
+/*
+Responsbile to get the data from FirebaseRemoteConfig and pass data to View
+ */
+
 class LeaderViewModel: ObservableObject {
     @Published var leaders: [Leader] = []
     

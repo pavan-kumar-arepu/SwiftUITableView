@@ -10,6 +10,16 @@ import Foundation
 import Firebase
 import FirebaseRemoteConfig
 
+
+/*
+ To Load Leader Image in detail screen
+ - parameter:
+    - size: icon size
+    - name: icon name
+    - alignment: preferable alignment
+ - returns: View
+ */
+
 class DataService {
     static let shared = DataService()
     private var leaders: [Leader] = []
@@ -19,15 +29,4 @@ class DataService {
     func getLeaders() -> [Leader] {
         return FirebaseRemoteConfigManager.shared.getLeaders
     }
-    
-//    func fetchLeaders() -> [Leader?] {
-//        FirebaseRemoteConfigManager.shared.fetchRemoteConfigData { [weak self] leaders in
-//            if let leaders = leaders {
-//                self?.leaders = leaders
-//            }
-//        }
-//
-//        guard let received le
-//        return leaders
-//    }
 }

@@ -9,6 +9,13 @@ import Foundation
 import Firebase
 import FirebaseRemoteConfig
 
+
+/*
+This is the Firebase core class, which is responsbile to get the data from Firebase
+This is singleton class
+ */
+
+
 class FirebaseRemoteConfigManager {
     static let shared = FirebaseRemoteConfigManager()
     private let remoteConfig = RemoteConfig.remoteConfig()
@@ -24,17 +31,16 @@ class FirebaseRemoteConfigManager {
         return leaders
     }
 
-    func fetchRemoteConfig(completion: @escaping () -> Void) {
-        remoteConfig.fetchAndActivate { _, error in
-            if let error = error {
-                print("Error fetching remote config: \(error)")
-            } else {
-                completion()
-                print("Remote Fetch Completed!")
-            }
-        }
-    }
+    /*
+    Responsbile to hit FirebaseAPI
+     - parameter:
+        - size: icon size
+        - name: icon name
+        - alignment: preferable alignment
+     - returns: View
+     */
     
+    //TODO:  Need to remove the JSON parsing from this method to maintain SRP
     func fetchRemoteConfigData(completion: @escaping ([Leader]?) -> Void) {
         let remoteConfig = RemoteConfig.remoteConfig()
 

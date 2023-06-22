@@ -9,8 +9,11 @@ import SwiftUI
 import Firebase
 import FirebaseRemoteConfig
 
+/*
+Responsbile to whole the LeaderListView
+ - returns: LeaderListView
+ */
 struct ContentView: View {
-    
     var body: some View {
         LeaderListView()
     }

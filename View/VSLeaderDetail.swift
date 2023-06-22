@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-// VerticalScrollLeaderDetail
+
+/*
+Responsbile to render Top part of Leader Details based on teh selection from ListView
+ - returns: DetailsView of Leader
+ */
 struct VSLeaderDetail: View {
     var leader: Leader
     

@@ -8,6 +8,10 @@
 import Foundation
 import SwiftUI
 
+/*
+Responsbile to render Leader Details based on teh selection from ListView aswell as Bottom Leaders
+ - returns: DetailsView of Leader
+ */
 struct LeaderDetail: View {
     
     var leader: Leader
@@ -25,6 +29,7 @@ struct LeaderDetail: View {
             IndianGradient()
             
             VStack {
+                // Display detail Leaders from top
                 VSLeaderDetail(leader: selectedLeaderDetails)
                 
                 
@@ -45,7 +50,6 @@ struct LeaderDetail: View {
                 }
                 .frame(height: 50)
                 .padding()
-                
             }
         }
         .navigationBarTitle(selectedButtonLeader?.name ?? leader.name)
@@ -58,3 +62,6 @@ struct LeaderDetail_Previews: PreviewProvider {
         LeaderDetail(leader: leader, leaders: [])
     }
 }
+
+
+

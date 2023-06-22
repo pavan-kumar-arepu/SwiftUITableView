@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/*
+Responsbile to render list of Leaders 
+ - returns: LeaderListView
+ */
 struct LeaderListView: View {
     
     var leaderVM = LeaderViewModel()
