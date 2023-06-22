@@ -26,7 +26,7 @@ struct LeaderListView: View {
                     Text("Data Loaded!") // Show content when data is loaded
                     List(leaders) { leader in
                         NavigationLink {
-                            LeaderDetail(leader: leader)
+                            LeaderDetail(leader: leader, leaders: leaders)
                         } label: {
                             LeaderRow(leader: leader)
                         }

@@ -9,16 +9,16 @@ import Foundation
 import SwiftUI
 
 struct LeaderDetail: View {
+    
     var leader: Leader
+    var leaders: [Leader]
     
-    @State private var selectedLeader: Bool = false
-
-    let defaultLeader: [Leader] = [Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "Very Good", achievements: "Bharat Ratna", leaderLogo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")]
-    
-    @State private var leaders = DataService.shared.getLeaders()
-    
-    private let gridItems = [GridItem(.flexible())]
-
+    @State private var selectedLeader: Leader?
+        
+    var selectedLeaderDetails: Leader {
+        selectedLeader ?? leader
+    }
+        
     var body: some View {
         ZStack {
             
@@ -29,41 +29,37 @@ struct LeaderDetail: View {
                     VSLeaderDetail(leader: leader)
                 }
                 
-                ScrollView(.horizontal) {
-                            LazyHGrid(rows: gridItems, spacing: 0) {
-                               ForEach(leaders) { leader in
-                                   LeaderGrid(gridIcon: leader.leaderLogo)
-                               }
-                           }
-//                           .padding()
-                           .frame(maxHeight: 50)
-                       }
-                .frame(maxHeight: 50)
-                
-//                ScrollView(.horizontal) {
-//                    HStack(spacing: 10) {
-//                        ForEach(leaders) { leader in
-//                            LeaderImage(size: 50.0, name: leader.leaderLogo, alignment: .leading)
-//                                .padding(10)
-//                        }
-//                        .onTapGesture {
-//                            _ = LeaderDetail(leader: leader)
-//                        }
-//                    }
-//                    .padding()
-//                }
+                HStack(spacing: 0) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(spacing: 16) {
+                            ForEach(leaders) { leader in
+                                LeaderImage(size: 50, name: selectedLeader?.leaderLogo ?? "", alignment: .leading)
+                                Button(action: {
+                                    selectedLeader = leader
+                                    LeaderImage(size: 50, name: selectedLeader?.leaderLogo ?? "", alignment: .leading)
+                                }) {
+                                    LeaderImage(size: 50, name: selectedLeader?.leaderLogo ?? "", alignment: .leading)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                }
+                .frame(height: 50)
+                .padding()
+
             }
-            .navigationBarTitleDisplayMode(.large)
-            .padding()
+//            .navigationBarTitleDisplayMode(.large)
+//            .navigationBarTitle(selectedArtistDetails.name)
         }
-        .navigationBarTitle("\(leader.name)")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitle(selectedLeader?.name ?? "")
+//        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LeaderDetail_Previews: PreviewProvider {
     static var previews: some View {
         let leader: Leader = Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "Very Good", achievements: "Bharat Ratna", leaderLogo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")
-        LeaderDetail(leader: leader)
+        LeaderDetail(leader: leader, leaders: [])
     }
 }
