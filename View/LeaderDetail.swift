@@ -13,10 +13,10 @@ struct LeaderDetail: View {
     var leader: Leader
     var leaders: [Leader]
     
-    @State private var selectedLeader: Leader?
+    @State private var selectedButtonLeader: Leader?
         
     var selectedLeaderDetails: Leader {
-        selectedLeader ?? leader
+        selectedButtonLeader ?? leader
     }
         
     var body: some View {
@@ -26,19 +26,18 @@ struct LeaderDetail: View {
     
             VStack {
                 ScrollView {
-                    VSLeaderDetail(leader: leader)
+                    VSLeaderDetail(leader: selectedLeaderDetails)
                 }
                 
+                // Display grid of Leaders icons at the bottom in a single row
                 HStack(spacing: 0) {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 16) {
                             ForEach(leaders) { leader in
-                                LeaderImage(size: 50, name: selectedLeader?.leaderLogo ?? "", alignment: .leading)
                                 Button(action: {
-                                    selectedLeader = leader
-                                    LeaderImage(size: 50, name: selectedLeader?.leaderLogo ?? "", alignment: .leading)
+                                    selectedButtonLeader = leader
                                 }) {
-                                    LeaderImage(size: 50, name: selectedLeader?.leaderLogo ?? "", alignment: .leading)
+                                    Image(leader.logo).resizable().frame(width: 50, height: 50)
                                 }
                             }
                         }
@@ -49,17 +48,14 @@ struct LeaderDetail: View {
                 .padding()
 
             }
-//            .navigationBarTitleDisplayMode(.large)
-//            .navigationBarTitle(selectedArtistDetails.name)
         }
-        .navigationBarTitle(selectedLeader?.name ?? "")
-//        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitle(selectedButtonLeader?.name ?? "")
     }
 }
 
 struct LeaderDetail_Previews: PreviewProvider {
     static var previews: some View {
-        let leader: Leader = Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "Very Good", achievements: "Bharat Ratna", leaderLogo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")
+        let leader: Leader = Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "Very Good", achievements: "Bharat Ratna", logo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")
         LeaderDetail(leader: leader, leaders: [])
     }
 }

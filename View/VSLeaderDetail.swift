@@ -14,7 +14,7 @@ struct VSLeaderDetail: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                LeaderImage(size: 200.0, name: leader.leaderLogo, alignment: .top)
+                LeaderImage(size: 200.0, name: leader.logo, alignment: .top)
                 
                 HStack {
                     Text("\(leader.rulingPeriod) - \(leader.party)")
@@ -49,7 +49,7 @@ struct VSLeaderDetail: View {
 
 struct VSLeaderDetail_Previews: PreviewProvider {
     static var previews: some View {
-        let leader: Leader = Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "IndianLeaders[49277:999645] [connection] nw_connection_copy_protocol_metadata_internal_block_invoke [C2] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection", achievements: "Bharat RatnaBharat RatnaBharat Ratna", leaderLogo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")
+        let leader: Leader = Leader(id: 1, name: "Kumar", pmNumber: "12", party: "BJP", rulingPeriod: "1947 - 2023", about: "IndianLeaders[49277:999645] [connection] nw_connection_copy_protocol_metadata_internal_block_invoke [C2] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection", achievements: "Bharat RatnaBharat RatnaBharat Ratna", logo: "Guljari-Nanda", signatureLogo: "Jawahar-Sign")
         VSLeaderDetail(leader: leader)
     }
 }

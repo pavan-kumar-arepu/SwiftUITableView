@@ -15,6 +15,6 @@ struct Leader: Hashable, Codable, Identifiable {
     let rulingPeriod: String
     let about: String
     let achievements: String
-    let leaderLogo: String
+    let logo: String
     let signatureLogo: String
 }
