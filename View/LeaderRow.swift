@@ -12,12 +12,11 @@ struct LeaderRow: View {
     var leader: Leader
     
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
             Image(leader.logo)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(width: 60, height: 60)
             
             VStack(alignment: .leading) {
                 Text("\(leader.name)")
