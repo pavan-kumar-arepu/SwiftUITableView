@@ -49,7 +49,7 @@ struct LeaderDetail: View {
 
             }
         }
-        .navigationBarTitle(selectedButtonLeader?.name ?? "")
+        .navigationBarTitle(selectedButtonLeader?.name ?? leader.name)
     }
 }
 
