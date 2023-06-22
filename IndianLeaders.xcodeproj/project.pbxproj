@@ -11,7 +11,6 @@
 		0B50C4B92A433452004DC76D /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50C4B82A433452004DC76D /* LinearGradient.swift */; };
 		0B50C4BB2A4345CD004DC76D /* LeaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50C4BA2A4345CD004DC76D /* LeaderImageView.swift */; };
 		0B50C4BD2A434DF8004DC76D /* VSLeaderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50C4BC2A434DF8004DC76D /* VSLeaderDetail.swift */; };
-		0B50C4BF2A436533004DC76D /* LeaderGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50C4BE2A436533004DC76D /* LeaderGrid.swift */; };
 		0BAB24C02A3FEEA9001F1BE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BAB24BF2A3FEEA9001F1BE6 /* GoogleService-Info.plist */; };
 		0BAB24C32A3FEF8E001F1BE6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0BAB24C22A3FEF8E001F1BE6 /* FirebaseAnalytics */; };
 		0BAB24C52A3FEF8E001F1BE6 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 0BAB24C42A3FEF8E001F1BE6 /* FirebaseRemoteConfig */; };
@@ -35,7 +34,6 @@
 		0B50C4B82A433452004DC76D /* LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
 		0B50C4BA2A4345CD004DC76D /* LeaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderImageView.swift; sourceTree = "<group>"; };
 		0B50C4BC2A434DF8004DC76D /* VSLeaderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSLeaderDetail.swift; sourceTree = "<group>"; };
-		0B50C4BE2A436533004DC76D /* LeaderGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderGrid.swift; sourceTree = "<group>"; };
 		0BAB24BF2A3FEEA9001F1BE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0BAB24C82A3FF5D0001F1BE6 /* FirebaseRemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRemoteConfigManager.swift; sourceTree = "<group>"; };
 		0BAB24CA2A3FFAA8001F1BE6 /* Leader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leader.swift; sourceTree = "<group>"; };
@@ -89,6 +87,15 @@
 				0BAB24CC2A3FFB8B001F1BE6 /* Constants.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		0B50C4E02A44556B004DC76D /* Resuable */ = {
+			isa = PBXGroup;
+			children = (
+				0B50C4BA2A4345CD004DC76D /* LeaderImageView.swift */,
+				0B50C4B82A433452004DC76D /* LinearGradient.swift */,
+			);
+			path = Resuable;
 			sourceTree = "<group>";
 		};
 		0BAB24BE2A3FEE89001F1BE6 /* Firebase */ = {
@@ -159,14 +166,12 @@
 		0BD00C0E2A3E59FD00F359E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B50C4E02A44556B004DC76D /* Resuable */,
 				0BD00C0F2A3E5A1600F359E5 /* LeaderRow.swift */,
-				0B50C4BA2A4345CD004DC76D /* LeaderImageView.swift */,
 				0BD00BFF2A3E583000F359E5 /* ContentView.swift */,
 				0B50C4B62A433100004DC76D /* LeaderListView.swift */,
 				0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */,
 				0B50C4BC2A434DF8004DC76D /* VSLeaderDetail.swift */,
-				0B50C4B82A433452004DC76D /* LinearGradient.swift */,
-				0B50C4BE2A436533004DC76D /* LeaderGrid.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,7 +260,6 @@
 				0BD00C002A3E583000F359E5 /* ContentView.swift in Sources */,
 				0BD00BFE2A3E583000F359E5 /* IndianLeaders.swift in Sources */,
 				0B50C4B92A433452004DC76D /* LinearGradient.swift in Sources */,
-				0B50C4BF2A436533004DC76D /* LeaderGrid.swift in Sources */,
 				0BD00C122A3E61A100F359E5 /* LeaderDetail.swift in Sources */,
 				0BAB24C92A3FF5D0001F1BE6 /* FirebaseRemoteConfigManager.swift in Sources */,
 				0BD00C102A3E5A1600F359E5 /* LeaderRow.swift in Sources */,

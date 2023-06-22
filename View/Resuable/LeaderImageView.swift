@@ -27,8 +27,11 @@ struct LeaderImageView_Previews: PreviewProvider {
     }
 }
 
-
-
+/*
+ To Load Signature Image
+ - parameter name: SignatueName from servers.
+ - returns: View
+ */
 struct Signature: View {
     var name: String
     
