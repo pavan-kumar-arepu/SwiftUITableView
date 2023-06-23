@@ -23,10 +23,14 @@ struct LeaderListView: View {
             ZStack {
                 IndianGradient()
                 
+//                Chakra()
+   
+                
                 if isLoading {
-                    ProgressView() // Show loading indicator while fetching data
+                    ChakraImage()
+                    ProgressView()
                 } else {
-                    Text("Data Loaded!") // Show content when data is loaded
+                    //Text("Data Loaded!") // Show content when data is loaded
                     List(leaders) { leader in
                         NavigationLink(destination: LeaderDetail(leader: leader, leaders: leaders)){
                             LeaderRow(leader: leader)

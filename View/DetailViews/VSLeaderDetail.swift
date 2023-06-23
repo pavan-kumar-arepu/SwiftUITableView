@@ -33,22 +33,29 @@ struct VSLeaderDetail: View {
                 
                 Spacer()
                 
-                HStack {
-                    Text("About:").bold().font(.title3) +
-                    Text("\n") +
-                    Text(leader.about).font(.subheadline)
+                if let aboutLeader = leader.about {
+                    HStack {
+                        Text("About:").bold().font(.title3) +
+                        Text("\n") +
+                        Text(aboutLeader).font(.subheadline)
+                    }
                 }
+                
                 Spacer()
                 
-                HStack {
-                    Text("Achievements:").bold().font(.title3) +
-                    Text("\n") +
-                    Text(leader.achievements).font(.subheadline)
+                if let leaderAchiv = leader.achievements {
+                    HStack {
+                        Text("Achievements:").bold().font(.title3) +
+                        Text("\n") +
+                        Text(leaderAchiv).font(.subheadline)
+                    }
                 }
                 
-                HStack {
-                    Text("Signature:").bold().font(.title3)
-                    Signature(name: leader.signatureLogo).font(.subheadline)
+                if leader.signatureLogo.count > 0 {
+                    HStack {
+                        Text("Signature:").bold().font(.title3)
+                        Signature(name: leader.signatureLogo).font(.subheadline)
+                    }
                 }
                 Spacer()
             }
