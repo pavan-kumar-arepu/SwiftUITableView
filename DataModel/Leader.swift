@@ -7,9 +7,8 @@
 
 import Foundation
 
-/*
-Leader Entity object
- */
+/// Leader Entity object
+
 struct Leader: Hashable, Codable, Identifiable {
     let id: Int
     let name: String

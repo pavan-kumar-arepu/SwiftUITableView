@@ -8,10 +8,13 @@
 import Foundation
 import SwiftUI
 
-/*
-Responsbile to render Leader Details based on teh selection from ListView aswell as Bottom Leaders
- - returns: DetailsView of Leader
- */
+/// Responsbile to render Leader Details based on teh selection from ListView aswell as Bottom Leaders
+/// - Parameters:
+///   - size: The width of the rectangle.
+///   - name: The height of the rectangle.
+///   - alignment: The height of the rectangle.
+/// - returns: DetailsView of Leader
+
 struct LeaderDetail: View {
     
     var leader: Leader
@@ -30,8 +33,8 @@ struct LeaderDetail: View {
             
             VStack {
                 // Display detail Leaders from top
-                VSLeaderDetail(leader: selectedLeaderDetails)
                 
+                VSLeaderDetail(leader: selectedLeaderDetails)
                 
                 // Display grid of Leaders icons at the bottom in a single row
                 HStack(spacing: 0) {

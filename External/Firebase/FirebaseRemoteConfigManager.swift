@@ -10,67 +10,56 @@ import Firebase
 import FirebaseRemoteConfig
 
 
-/*
-This is the Firebase core class, which is responsbile to get the data from Firebase
-This is singleton class
- */
+protocol LeaderDataProvider {
+    func fetchLeaders(completion: @escaping ([Leader]?) -> Void)
+}
 
-
-class FirebaseRemoteConfigManager {
+/// The FirebaseRemoteConfigManager acts as a coordinator, orchestrating the flow between the API request and the data parsing.
+///
+/// Use this class from client, when we need 'Leaders' object
+///
+class FirebaseRemoteConfigManager: LeaderDataProvider {
+    
     static let shared = FirebaseRemoteConfigManager()
-    private let remoteConfig = RemoteConfig.remoteConfig()
-    private var leaders: [Leader] = []
-
+    
+    private let apiManager: FirebaseAPIManager
+    private let dataParser: DataParser
+    
     private init() {
-        let settings = RemoteConfigSettings()
-        remoteConfig.configSettings = settings
-        remoteConfig.setDefaults(fromPlist: "GoogleService-Info")
+        apiManager = FirebaseAPIManager.shared
+        dataParser = DataParser()
     }
     
-    var getLeaders: [Leader] {
-        return leaders
-    }
-
-    /*
-    Responsbile to hit FirebaseAPI
-     - parameter:
-        - size: icon size
-        - name: icon name
-        - alignment: preferable alignment
-     - returns: View
-     */
+    var leaders: [Leader] = []
     
-    //TODO:  Need to remove the JSON parsing from this method to maintain SRP
+    /// Prepare 'leaders' data by consuming 'apiManager', 'dataParser'
+    ///
+    /// - Parameters:
+    ///   - completion: Leaders Array
     func fetchRemoteConfigData(completion: @escaping ([Leader]?) -> Void) {
-        let remoteConfig = RemoteConfig.remoteConfig()
-
-        remoteConfig.fetch(withExpirationDuration: 0) { [weak self] status, error in
-            if error == nil {
-                remoteConfig.activate { [self] _, _ in
-                    let json = remoteConfig.configValue(forKey: Constants.remoteJsonKeyName).jsonValue
-
-                    do {
-                        if let jsonData = try? JSONSerialization.data(withJSONObject: json, options: []) {
-                            let decoder = JSONDecoder()
-                            self?.leaders = try decoder.decode([String: [Leader]].self, from: jsonData)["leaders"] ?? []
-                            completion(self?.leaders)
-                        } else {
-                            completion(nil)
-                        }
-                    } catch {
-                        print("Error decoding leaders: \(error)")
-                        completion(nil)
-                    }
-                }
-            } else {
-                print("Error fetching remote config: \(error?.localizedDescription ?? "")")
+        apiManager.fetchRemoteConfigData { [weak self] json in
+            guard let json = json else {
                 completion(nil)
+                return
             }
+            
+            let parsedLeaders = self?.dataParser.parseLeaders(from: json)
+            self?.leaders = parsedLeaders ?? []
+            print("Remote Data retuned to caller!")
+            completion(parsedLeaders)
         }
     }
     
-    private func convertToData(json: Any) throws -> Data? {
-        let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
-        return jsonData
+    
+    /// To share leaders array to dataService
+    ///
+    /// - Returns: leaders array
+    ///
+    var getLeaders: [Leader] {
+        return leaders
+    }
+    
+    func fetchLeaders(completion: @escaping ([Leader]?) -> Void) {
+        fetchRemoteConfigData(completion: completion)
     }
 }

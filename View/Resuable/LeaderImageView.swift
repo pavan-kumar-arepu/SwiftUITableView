@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-/*
- To Load Leader Image in detail screen
- - parameter:
-    - size: icon size
-    - name: icon name
-    - alignment: preferable alignment
- - returns: View
- */
+/// To Load Leader Image in detail screen
+/// - Parameters:
+///   - size: The width of the rectangle.
+///   - name: The height of the rectangle.
+///   - alignment: The height of the rectangle.
+/// - returns: View
 
 struct LeaderImage: View {
     var size: CGFloat

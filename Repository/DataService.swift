@@ -11,22 +11,28 @@ import Firebase
 import FirebaseRemoteConfig
 
 
-/*
- To Load Leader Image in detail screen
- - parameter:
-    - size: icon size
-    - name: icon name
-    - alignment: preferable alignment
- - returns: View
- */
+/// This class is 
+///
+/// Use this class from client, when we need 'Leaders' object
+///
 
 class DataService {
     static let shared = DataService()
-    private var leaders: [Leader] = []
     
-    private init() {}
+    private let leaderDataProvider: LeaderDataProvider
     
-    func getLeaders() -> [Leader] {
-        return FirebaseRemoteConfigManager.shared.getLeaders
+    private init() {
+        leaderDataProvider = FirebaseRemoteConfigManager.shared
+    }
+    
+    
+    
+    /// Responsible to get leaders from DataService and send data to caller via completion Handler
+    ///
+    /// - Parameters:
+    ///   - completion: Leader completion Handler
+    ///   - height: The height of the rectangle.
+    func getLeaders(completion: @escaping ([Leader]?) -> Void) {
+        leaderDataProvider.fetchLeaders(completion: completion)
     }
 }

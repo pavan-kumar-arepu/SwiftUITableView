@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+
+/// Gradient used as a background view in both the LIst and Details screens
+/// - Parameters:
+/// - returns: A gradient view
+///
 struct IndianGradient: View {
     var body: some View {
         LinearGradient(

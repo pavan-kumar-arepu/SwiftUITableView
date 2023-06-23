@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-/*
-Responsbile to render list of Leaders 
- - returns: LeaderListView
- */
+/// Responsbile to render list of Leaders
+///
+/// - returns: View
 struct LeaderListView: View {
     
     var leaderVM = LeaderViewModel()
@@ -43,6 +42,10 @@ struct LeaderListView: View {
         }
     }
     
+    
+    /// Responsbile to load the Leaders ListView once data received
+    /// Show the indicator
+    /// 
     func loadData() {
         leaderVM.fetchData { status in
             isLoading = false

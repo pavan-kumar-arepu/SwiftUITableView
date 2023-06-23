@@ -18,9 +18,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   }
 }
 
-/*
-Main Class - Entrance of the application
- */
+/// Main Class - Entrance of the application
 @main
 struct SwiftUITableViewApp: App {
     // register app delegate for Firebase setup

@@ -8,12 +8,10 @@
 import Foundation
 import SwiftUI
 
-/*
-Responsbile to load the singleLeader i.e. LeaderRow
- - parameter:
-    - leader: Single Leader
- - returns: View
- */
+/// Responsbile to load the singleLeader i.e. LeaderRow
+/// - Parameters:
+///   - leader: Single Leader
+/// - returns: View
 
 struct LeaderRow: View {
     var leader: Leader

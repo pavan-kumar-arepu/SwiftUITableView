@@ -7,22 +7,28 @@
 
 import SwiftUI
 
+/// This class is part of "LeaderDetails"
+/// Responsbile to render top part of this screen(DetailsScreen) based on the selection from ListView
+/// - returns: Top part of LeaderDetails View
 
-/*
-Responsbile to render Top part of Leader Details based on teh selection from ListView
- - returns: DetailsView of Leader
- */
 struct VSLeaderDetail: View {
     var leader: Leader
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
+                Spacer()
+
                 LeaderImage(size: 200.0, name: leader.logo, alignment: .top)
                 
-                HStack {
-                    Text("\(leader.rulingPeriod) - \(leader.party)")
+                Spacer()
+                
+                HStack(alignment: .center) {
+                    Text("\(leader.rulingPeriod) \n\(leader.party)")
                         .font(.subheadline)
+                        .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, alignment: .center)
+
                 }
                 
                 Spacer()
