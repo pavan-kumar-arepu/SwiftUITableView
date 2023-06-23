@@ -31,7 +31,6 @@
 		0BD00C102A3E5A1600F359E5 /* LeaderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C0F2A3E5A1600F359E5 /* LeaderRow.swift */; };
 		0BD00C122A3E61A100F359E5 /* LeaderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */; };
 		0BD407B62A46471700EA9DFA /* ChakraImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD407B52A46471700EA9DFA /* ChakraImage.swift */; };
-		0BD407B92A4651F600EA9DFA /* Info_Old.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BD407B82A4651F500EA9DFA /* Info_Old.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +56,6 @@
 		0BD00C0F2A3E5A1600F359E5 /* LeaderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderRow.swift; sourceTree = "<group>"; };
 		0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderDetail.swift; sourceTree = "<group>"; };
 		0BD407B52A46471700EA9DFA /* ChakraImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChakraImage.swift; sourceTree = "<group>"; };
-		0BD407B82A4651F500EA9DFA /* Info_Old.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_Old.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +153,6 @@
 		0BD00BF12A3E583000F359E5 = {
 			isa = PBXGroup;
 			children = (
-				0BD407B82A4651F500EA9DFA /* Info_Old.plist */,
 				0B50C5162A4641CA004DC76D /* Network */,
 				0B50C4B52A433087004DC76D /* Util */,
 				0B50C4B42A433075004DC76D /* External */,
@@ -289,7 +286,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BD407B92A4651F600EA9DFA /* Info_Old.plist in Resources */,
 				0BD00C052A3E583300F359E5 /* Preview Assets.xcassets in Resources */,
 				0BD00C022A3E583300F359E5 /* Assets.xcassets in Resources */,
 				0BAB24C02A3FEEA9001F1BE6 /* GoogleService-Info.plist in Resources */,
@@ -463,7 +459,7 @@
 				);
 				MARKETING_VERSION = 3.0.0;
 				OTHER_SWIFT_FLAGS = "-D FIR_REMOTE_CONFIG_ENABLED";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ppam.arepu.IndianLeaders;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ppam.arepu.PrimeMinisters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -493,7 +489,7 @@
 				);
 				MARKETING_VERSION = 3.0.0;
 				OTHER_SWIFT_FLAGS = "-D FIR_REMOTE_CONFIG_ENABLED";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ppam.arepu.IndianLeaders;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ppam.arepu.PrimeMinisters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
