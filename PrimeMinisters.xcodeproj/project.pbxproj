@@ -31,6 +31,7 @@
 		0BD00C102A3E5A1600F359E5 /* LeaderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C0F2A3E5A1600F359E5 /* LeaderRow.swift */; };
 		0BD00C122A3E61A100F359E5 /* LeaderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */; };
 		0BD407B62A46471700EA9DFA /* ChakraImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD407B52A46471700EA9DFA /* ChakraImage.swift */; };
+		0BD407B92A4651F600EA9DFA /* Info_Old.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BD407B82A4651F500EA9DFA /* Info_Old.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +49,7 @@
 		0BAB24CE2A3FFD1E001F1BE6 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0BAB24D12A4002B8001F1BE6 /* LeadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersViewModel.swift; sourceTree = "<group>"; };
 		0BAB24D32A409836001F1BE6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		0BD00BFA2A3E583000F359E5 /* IndianLeaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndianLeaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BD00BFA2A3E583000F359E5 /* PrimeMinisters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeMinisters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD00BFD2A3E583000F359E5 /* IndianLeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianLeaders.swift; sourceTree = "<group>"; };
 		0BD00BFF2A3E583000F359E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0BD00C012A3E583300F359E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		0BD00C0F2A3E5A1600F359E5 /* LeaderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderRow.swift; sourceTree = "<group>"; };
 		0BD00C112A3E61A100F359E5 /* LeaderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderDetail.swift; sourceTree = "<group>"; };
 		0BD407B52A46471700EA9DFA /* ChakraImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChakraImage.swift; sourceTree = "<group>"; };
+		0BD407B82A4651F500EA9DFA /* Info_Old.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_Old.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		0BD00BF12A3E583000F359E5 = {
 			isa = PBXGroup;
 			children = (
+				0BD407B82A4651F500EA9DFA /* Info_Old.plist */,
 				0B50C5162A4641CA004DC76D /* Network */,
 				0B50C4B52A433087004DC76D /* Util */,
 				0B50C4B42A433075004DC76D /* External */,
@@ -168,7 +171,7 @@
 		0BD00BFB2A3E583000F359E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0BD00BFA2A3E583000F359E5 /* IndianLeaders.app */,
+				0BD00BFA2A3E583000F359E5 /* PrimeMinisters.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,9 +226,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0BD00BF92A3E583000F359E5 /* IndianLeaders */ = {
+		0BD00BF92A3E583000F359E5 /* PrimeMinisters */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0BD00C082A3E583300F359E5 /* Build configuration list for PBXNativeTarget "IndianLeaders" */;
+			buildConfigurationList = 0BD00C082A3E583300F359E5 /* Build configuration list for PBXNativeTarget "PrimeMinisters" */;
 			buildPhases = (
 				0BD00BF62A3E583000F359E5 /* Sources */,
 				0BD00BF72A3E583000F359E5 /* Frameworks */,
@@ -235,14 +238,14 @@
 			);
 			dependencies = (
 			);
-			name = IndianLeaders;
+			name = PrimeMinisters;
 			packageProductDependencies = (
 				0BAB24C22A3FEF8E001F1BE6 /* FirebaseAnalytics */,
 				0BAB24C42A3FEF8E001F1BE6 /* FirebaseRemoteConfig */,
 				0BAB24C62A3FEF8E001F1BE6 /* FirebaseRemoteConfigSwift */,
 			);
 			productName = SwiftUITableView;
-			productReference = 0BD00BFA2A3E583000F359E5 /* IndianLeaders.app */;
+			productReference = 0BD00BFA2A3E583000F359E5 /* PrimeMinisters.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -260,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0BD00BF52A3E583000F359E5 /* Build configuration list for PBXProject "IndianLeaders" */;
+			buildConfigurationList = 0BD00BF52A3E583000F359E5 /* Build configuration list for PBXProject "PrimeMinisters" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,7 +279,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0BD00BF92A3E583000F359E5 /* IndianLeaders */,
+				0BD00BF92A3E583000F359E5 /* PrimeMinisters */,
 			);
 		};
 /* End PBXProject section */
@@ -286,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD407B92A4651F600EA9DFA /* Info_Old.plist in Resources */,
 				0BD00C052A3E583300F359E5 /* Preview Assets.xcassets in Resources */,
 				0BD00C022A3E583300F359E5 /* Assets.xcassets in Resources */,
 				0BAB24C02A3FEEA9001F1BE6 /* GoogleService-Info.plist in Resources */,
@@ -443,7 +447,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUITableView/Preview Content\"";
 				DEVELOPMENT_TEAM = D2KUN44K2A;
 				ENABLE_PREVIEWS = YES;
@@ -458,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0.0;
 				OTHER_SWIFT_FLAGS = "-D FIR_REMOTE_CONFIG_ENABLED";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ppam.arepu.IndianLeaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -474,7 +477,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUITableView/Preview Content\"";
 				DEVELOPMENT_TEAM = D2KUN44K2A;
 				ENABLE_PREVIEWS = YES;
@@ -489,7 +491,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0.0;
 				OTHER_SWIFT_FLAGS = "-D FIR_REMOTE_CONFIG_ENABLED";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ppam.arepu.IndianLeaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,7 +504,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0BD00BF52A3E583000F359E5 /* Build configuration list for PBXProject "IndianLeaders" */ = {
+		0BD00BF52A3E583000F359E5 /* Build configuration list for PBXProject "PrimeMinisters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BD00C062A3E583300F359E5 /* Debug */,
@@ -511,7 +513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0BD00C082A3E583300F359E5 /* Build configuration list for PBXNativeTarget "IndianLeaders" */ = {
+		0BD00C082A3E583300F359E5 /* Build configuration list for PBXNativeTarget "PrimeMinisters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BD00C092A3E583300F359E5 /* Debug */,

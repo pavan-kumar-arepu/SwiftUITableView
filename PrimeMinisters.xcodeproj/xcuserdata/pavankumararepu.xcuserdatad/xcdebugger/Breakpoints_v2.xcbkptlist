@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "705D714E-A8A2-44E3-9F6E-00DB86CB29A5"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "854151ED-E646-494D-8B49-98634F91AE25"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUITableView/LeaderDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F11756AB-B8B8-4524-98DF-15DB6068EFAC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUITableView/LeaderDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E52CD12-E93D-4DBC-A7F9-3749FE1E599C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUITableView/LeaderDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90D5D291-6B26-4871-8FFA-45B57CB6F911"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUITableView/LeaderDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155">
+            <Locations>
+               <Location
+                  uuid = "90D5D291-6B26-4871-8FFA-45B57CB6F911 - 78e695ce59d8efc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IndianLeaders.LeaderDetailView.selectedLeader.getter : Swift.Optional&lt;IndianLeaders.Leader&gt;"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/SwiftUITableView/LeaderDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "737">
+               </Location>
+               <Location
+                  uuid = "90D5D291-6B26-4871-8FFA-45B57CB6F911 - e92a03873e02dff6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IndianLeaders.LeaderDetailView.selectedLeader.setter : Swift.Optional&lt;IndianLeaders.Leader&gt;"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/SwiftUITableView/LeaderDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "227">
+               </Location>
+               <Location
+                  uuid = "90D5D291-6B26-4871-8FFA-45B57CB6F911 - d80f95612caf5bc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IndianLeaders.LeaderDetailView.selectedLeader.modify : Swift.Optional&lt;IndianLeaders.Leader&gt;"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/SwiftUITableView/LeaderDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "90D5D291-6B26-4871-8FFA-45B57CB6F911 - 703ad89633afd426"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IndianLeaders.LeaderDetailView.selectedLeader.modify : Swift.Optional&lt;IndianLeaders.Leader&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/SwiftUITableView/LeaderDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "90D5D291-6B26-4871-8FFA-45B57CB6F911 - 756a36fde3c0e1fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IndianLeaders.LeaderDetailView.$selectedLeader.getter : SwiftUI.Binding&lt;Swift.Optional&lt;IndianLeaders.Leader&gt;&gt;"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/SwiftUITableView/LeaderDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "765">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98223C2E-EB09-483C-9B6E-21BBC83D0FB2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "View/LeaderGrid.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48463B43-9637-408C-AAE6-2748D104927D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "View/VSLeaderDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "48463B43-9637-408C-AAE6-2748D104927D - 938aba8afdfdeb85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(IndianLeaders.LeaderImage, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, IndianLeaders.Signature)&gt;&gt;, SwiftUI.Spacer)&gt;&gt; in IndianLeaders.VSLeaderDetail.body.getter : some"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/View/VSLeaderDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "954">
+               </Location>
+               <Location
+                  uuid = "48463B43-9637-408C-AAE6-2748D104927D - a072386970ed28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(IndianLeaders.LeaderImage, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, IndianLeaders.Signature)&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(IndianLeaders.LeaderImage, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.Text&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, IndianLeaders.Signature)&gt;&gt;, SwiftUI.Spacer)&gt;&gt; in IndianLeaders.VSLeaderDetail.body.getter : some"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/View/VSLeaderDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "1172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DE2BA0F-50D3-47FF-BACD-AC8C789006BF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "View/VSLeaderDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D52CC870-540E-4550-A9BD-EB11E5462171"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "View/VSLeaderDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61D5BBDF-AD6E-452F-98E5-35CFB0B0207B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUITableView/IndianLeaders.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4FA08FE0-673E-4759-97C6-1E44C31BBED5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUITableView/IndianLeaders.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4FA08FE0-673E-4759-97C6-1E44C31BBED5 - a3d853985319986b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;IndianLeaders.ContentView, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt; in IndianLeaders.SwiftUITableViewApp.body.getter : some"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/SwiftUITableView/IndianLeaders.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "642">
+               </Location>
+               <Location
+                  uuid = "4FA08FE0-673E-4759-97C6-1E44C31BBED5 - 95dddc482d15c6d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;IndianLeaders.ContentView, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt; in IndianLeaders.SwiftUITableViewApp.body.getter : some"
+                  moduleName = "IndianLeaders"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavankumararepu/Documents/SwiftUI/LeadersTableView/SwiftUITableView/SwiftUITableView/IndianLeaders.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "286">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
